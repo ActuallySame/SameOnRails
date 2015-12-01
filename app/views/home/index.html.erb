@@ -1,1 +1,10 @@
 <h1>Hello</h1>
+<h2>Subscribe to a user</h2>
+<%= form_tag subscribe_path do %>
+  <%= label_tag :sub, "Who do you want to subscribe to?" %>
+  <%= text_area_tag :sub %>
+  <%= submit_tag "Subscribe!" %>
+<% end %>
+<%= button_to "Add a Same", same_new_path, :class => "button medium", :method => :get %>
+<%= button_to "Log Out", destroy_user_session_path, :class => "button medium", :method => :delete %>
+
