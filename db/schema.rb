@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124001914) do
+ActiveRecord::Schema.define(version: 20151201231831) do
 
   create_table "followings", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "a_id"
+    t.integer  "b_id"
   end
 
   create_table "sames", force: :cascade do |t|
