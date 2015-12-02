@@ -9,8 +9,10 @@ class SameController < ApplicationController
 
 	def create
 		@same = Same.create same_params
+		@same.user_id = current_user.id
+		puts current_user.id
 		if @same.save
-			redirect_to user_path(:id => current_user.id)
+			redirect_to :root
 		else
 			flash[:error] = @same.errors.full_messages.to_sentence
 			redirect_to same_new_path
