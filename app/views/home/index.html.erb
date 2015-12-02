@@ -1,10 +1,52 @@
-<h1>Hello</h1>
-<h2>Subscribe to a user</h2>
-<%= form_tag subscribe_path do %>
-  <%= label_tag :sub, "Who do you want to subscribe to?" %>
-  <%= text_area_tag :sub %>
-  <%= submit_tag "Subscribe!" %>
-<% end %>
-<%= button_to "Add a Same", same_new_path, :class => "button medium", :method => :get %>
-<%= button_to "Log Out", destroy_user_session_path, :class => "button medium", :method => :delete %>
+<!DOCTYPE html>
+<html lang = en>
+<head>
+	<title>Same</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/index.css">
+  	<link rel="icon" href="images/samelogo.png" type="image/png" sizes="16x16">
+</head>
+<body>
+	<div id="title_section">
+		<h1 id="title_header" style="margin-top: 0px;">same.</h1>
+	</div>
+	<div id="pics">
+		<% @sames.reverse.each do |s| %>
+			<div class= "usernames">
+				<%= User.find(s.user_id).username %>
+			</div>
+			<br>
+			<div class= "image">
+				<%=image_tag s.image.url %>
+			</div>
+			<br><br>
+		<% end %>
+	</div>
+	<div>
+	<h2>Subscribe to a user</h2>
+	<%= form_tag subscribe_path do %>
+	  <%= label_tag :sub, "Who do you want to subscribe to?" %>
+	  <%= text_area_tag :sub %>
+	  <%= submit_tag "Subscribe!" %>
+	<% end %>
+	<%= button_to "Add a Same", same_new_path, :class => "button medium", :method => :get %>
+	<%= button_to "Log Out", destroy_user_session_path, :class => "button medium", :method => :delete %>
+	</div>
+</body>
+
+<script>
+		function changeImage(a) {
+			if (a==""){
+        		$('#photo_section').fadeTo("medium", 1);
+        	}
+        	else{
+        		$('#photo_section').fadeTo("medium", .2);
+        		$('#title_header').fadeTo("medium", .5);
+        	}
+        	
+        	setTimeout(function() {document.getElementById("main_image").src=a;},350);
+        	
+    	}
+	</script>
 

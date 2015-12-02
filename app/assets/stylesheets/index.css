@@ -1,0 +1,52 @@
+body {
+	background-color: #f6f6f6;
+	position: relative;
+}
+@font-face {
+    font-family: 'Unicorn';
+    src: url(UNICORN.TTF);
+}
+
+#title_section h1 {
+	font-family: 'Unicorn';
+	color: #9512b0;
+	text-align: center;
+	font-size: 75px;
+}
+
+#title_section {
+	top: 0px;
+	height: 110px;
+	width: 100%;
+	position: fixed;
+	border-color: #FFFFFF;
+	border-style: solid;
+	border-width: 10%;
+	z-index: 10000;
+	background-color: #e5e5e5	
+}
+
+#pics {
+	position: relative;
+	top: 60px;
+}
+.image img {
+	height: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 50%;
+
+}
+.image:hover img{
+	padding: 0px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #df21f6;
+}
+.usernames {
+	font-size: 18px;
+	font-style: bold;
+	margin-left: 25%;
+
+}

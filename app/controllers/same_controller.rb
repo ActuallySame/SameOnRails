@@ -14,7 +14,7 @@ class SameController < ApplicationController
 		if @same.save
 			redirect_to :root
 		else
-			flash[:error] = @same.errors.full_messages.to_sentence
+			puts @same.errors.full_messages.to_sentence
 			redirect_to same_new_path
 		end
 	end
