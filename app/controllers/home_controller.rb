@@ -24,13 +24,19 @@ class HomeController < ApplicationController
 		puts "Hello"
 		@new_f = Following.new
 		@user_b = User.find_by username: params[:sub]
-		@new_f.a_id = current_user.id
-		@new_f.b_id = @user_b.id
-		if @new_f.save
-			puts "Success"
+		if @user_b == nil
+			flash[:error] = "Invalid Username"
+			redirect_to :root
 		else
-			puts "Failure"
+			@new_f.a_id = current_user.id
+			@new_f.b_id = @user_b.id
+			if @new_f.save
+				puts "Success"
+			else
+				puts "Failure"
+			end
+			redirect_to :root
 		end
-		redirect_to :root
+		
 	end
 end
