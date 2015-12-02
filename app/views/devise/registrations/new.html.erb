@@ -5,15 +5,75 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="app/assets/registration.css">
+  <link rel="stylesheet" href="registration.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link rel="icon" href="PlumLogo.png" type="image/png" sizes="16x16">
+  <style>
+  body {
+  background-color: #f6f6f6;
+  position: relative;
+}
+@font-face {
+    font-family: 'Unicorn';
+    src: url(UNICORN.TTF);
+}
+
+#title_section h1 {
+  font-family: 'Unicorn';
+  color: #9512b0;
+  text-align: center;
+  font-size: 75px;
+}
+
+#title_section {
+  height: 110px;
+  top: 0px;
+  width: 100%;
+  position: fixed;
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-width: 5px;
+  z-index: 10000;
+  background-color: #e5e5e5
+
+}
+
+#login {
+  border-style: solid;
+  border-width: 10px;
+  border-color: #FFFFFF;
+  position: relative;
+  margin-top: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 400px;
+  background-color: #e5e5e5;
+  height: 400px;
+  text-align: center;
+
+
+} 
+#login a {
+  text-align: center;
+}
+#login h3 {
+  text-align: center;
+  font-weight: bold;
+
+}
+#login form {
+  margin:auto;
+
+}
+</style>
+
 </head>
 <body>
   <div id="title_section">
     <h1 id="title_header">same.</h1>
   </div>
+
 
 <!-- <div id="login">
     <h1>Create Account</h1>
@@ -65,10 +125,11 @@
 
       <%= render "devise/shared/links" %> -->
 
-<div class="login">
+<div id="login">
   <div class="authform">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
       <h3>Sign up</h3>
+      <br>
       <%= devise_error_messages! %>
       <div class="input-group input-group-lg">
           <span class="input-group-addon">
