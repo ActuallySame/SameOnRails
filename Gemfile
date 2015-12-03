@@ -29,6 +29,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'simple_form'
 gem 'rails_12factor', group: :production
+gem 'rmagick'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
