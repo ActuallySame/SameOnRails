@@ -8,4 +8,5 @@
 %w(Eric Kanerd Naman).each do |name|
   User.create firstName: name, lastName: 'Smith', email: name+"@berkeley.edu", password: 'password', username: name + rand(1..20).to_s
 end
-
+Following.create a_id: 1, b_id: 2
+Following.create a_id: 3, b_id: 2
