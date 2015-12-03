@@ -3,6 +3,7 @@ class HomeController < ApplicationController
 		if current_user == nil 
 			redirect_to new_user_session_path
 		else
+			@current_user_name = current_user.name
 			subs = Following.where(b_id: current_user.id)
 			sub_ids = Array.new
 			sub_ids.push(current_user.id)
