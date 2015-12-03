@@ -9,8 +9,8 @@
   User.create firstName: name, lastName: 'Smith', email: name+"@berkeley.edu", password: 'password', username: name + rand(1..20).to_s
 end
 
-Same.create(image: image-url("same1.jpg")), user_id: 1)
-Same.create(image: image-url("same2.jpg")), user_id: 2)
-Same.create(image: image-url("same3.jpg")), user_id: 3)
-Same.create(image: image-url("same4.jpg")), user_id: 1)
-Same.create(image: image-url("same5.jpg")), user_id: 2)
+Same.create(image: File.new(asset_path('same1.jpg')), user_id: 1)
+Same.create(image: File.new(asset_path('same2.jpg')), user_id: 2)
+Same.create(image: File.new(asset_path('same3.jpg')), user_id: 3)
+Same.create(image: File.new(asset_path('same4.jpg')), user_id: 1)
+Same.create(image: File.new(asset_path('same5.jpg')), user_id: 2)
