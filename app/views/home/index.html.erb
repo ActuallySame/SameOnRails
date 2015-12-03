@@ -10,8 +10,7 @@
 	<div id="title_section">
 		<h1 id="title_header" style="margin-top: 0px;">spam.</h1>
 	</div>
-	<div id="pics">
-	<div id="subs">
+		<div id="subs">
 	<h2>Subscribe to a user</h2>
 	<%= form_tag subscribe_path do %>
 	  <%= label_tag :sub, "Who do you want to subscribe to?" %>
@@ -21,6 +20,7 @@
 	<%= button_to "Add a Spam", same_new_path, :class => "button medium", :method => :get %>
 	<%= button_to "Log Out", destroy_user_session_path, :class => "button medium", :method => :delete %>
 	</div>
+	<div id="pics">
 		<% @sames.reverse.each do |s| %>
 			<div class= "usernames">
 				<%= User.find(s.user_id).username %>
