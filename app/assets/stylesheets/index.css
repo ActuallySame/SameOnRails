@@ -30,6 +30,10 @@ body {
 	position: relative;
 	top: 130px;
 }
+#subs{
+	position: relative;
+	
+}
 .image img {
 	height: 600px;
 	display: block;
