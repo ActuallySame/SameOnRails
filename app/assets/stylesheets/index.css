@@ -32,7 +32,7 @@ body {
 }
 #subs{
 	position: relative;
-	
+	top: 100px;
 }
 .image img {
 	height: 600px;
