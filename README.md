@@ -1,4 +1,4 @@
-# Same 2.0 built on Ruby on Rails.
+# ActuallySpam (A Spin off of ActuallySame) built on Ruby on Rails.
 
 Title: actuallyspam.
 Team Members: Eric Hou, Naman Priyadarshi, Kanaad Parvate
